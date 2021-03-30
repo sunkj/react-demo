@@ -17,7 +17,7 @@ before_install:
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host 主机IP地址\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
-- scp -o stricthostkeychecking=no -r build root@www.gzxinen.com:/git/travis/demo
+- scp -o stricthostkeychecking=no -r build root@www.gzxinen.com:/mnt/git/travis/demo
 branches:
   only:
     - develop
