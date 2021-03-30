@@ -13,7 +13,7 @@ notifications:
 before_install:
 - openssl aes-256-cbc -K $encrypted_b52dbd7a86e3_key -iv $encrypted_b52dbd7a86e3_iv
   -in travisci.enc -out ~/.ssh/travisci -d
-- chmod 600 ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/travisci
 - echo -e "Host www.gzxinen.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
 - scp -o stricthostkeychecking=no -r build root@www.gzxinen.com:/mnt/git/travis/demo
