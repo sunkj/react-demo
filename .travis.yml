@@ -6,5 +6,3 @@ install:
   npm install
 script: 
   npm test
-deploy: 
-  npm run build
