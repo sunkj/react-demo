@@ -6,3 +6,10 @@ install:
   npm install
 script: 
   npm test
+notifications: 
+  email:
+    recipients:
+      - sunkanjue@163.com
+      - other@example.com
+    on_success: always # default: change
+    on_failure: always # default: always
