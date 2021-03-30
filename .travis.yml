@@ -9,9 +9,9 @@ notifications:
     on_success: always
     on_failure: always
 before_install:
-- openssl aes-256-cbc -K $encrypted_7e6034f696a9_key -iv $encrypted_7e6034f696a9_iv
-  -in xinen.enc -out ~/.ssh/xinen -d
-- chmod 600 ~/.ssh/xinen
+- openssl aes-256-cbc -K $encrypted_e6f8047c3a1d_key -iv $encrypted_e6f8047c3a1d_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
 - echo -e "Host www.gzxinen.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 after_success:
 - scp -o stricthostkeychecking=no -r build root@www.gzxinen.com:/mnt/git/travis/demo
